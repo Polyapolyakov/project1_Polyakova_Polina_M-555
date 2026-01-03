@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "project1-polyakova-polina-m-555"
+version = "0.1.0"
+description = "Labytinth Game"
+authors = ["Polyapolyakov <Inthetrans@yandex.ru>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+[tool.poetry.scripts]
+project = "labyrinth_game.main:main"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.4.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+exclude = ["venv", ".venv", "dist", "__pycache__"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+ignore = []
+
+[[tool.poetry.packages]]
+include = "labyrinth_game"
